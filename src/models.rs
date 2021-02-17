@@ -6,3 +6,12 @@ pub struct Cat {
     pub name: String,
     pub image_path: String
 }
+
+#[derive(Insertable, Serialize, Deserialize)]
+#[table_name = "cats"]
+pub struct NewCat {
+    // id will be added by the database
+    pub name: String,
+    pub image_path: String
+}
+
